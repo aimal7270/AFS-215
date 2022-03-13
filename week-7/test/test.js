@@ -1,6 +1,6 @@
 const chai = require('chai')
 const expect = chai.expect
-const AppList = require('../capstone')
+const AppList = require('../capstone.js')
 
 it('add item to array ', function(){
 	
@@ -10,7 +10,7 @@ it('add item to array ', function(){
 it('add multiple items to the array ', function(){
 	
 		expect(appList.pushArray('Cricket game is on For sunday',"Need to practice batting",'Warm up befor','Catching practice',1,2,true,{ground:'Silver Star'})).to.deep.equal
-        (['Cricket game is on For sunday',"Need to practice batting",'tom tom','Catching practice',1,2,true,{ground:'Silver Star'}]) 
+        (['Cricket game is on For sunday',"Need to practice batting",'Warm up befor','Catching practice',1,2,true,{ground:'Silver Star'}]) 
 
 })
 
@@ -24,7 +24,7 @@ it('delete item from the array ', function(){
 it('delete the last random item from the array ', function(){
 	
     appList.pushArray('Cricket game is on For sunday',"Need to practice batting",'Warm up befor','floor tom',1,2,true,{ground:'Silver Star'})
-		expect(todoList.removeArray('floor tom')).to.deep.equal(['Cricket game is on For sunday','Need to practice batting','Warm up befor',1,2,true,{ground:'Silver Star'}]) 
+		expect(appList.removeArray('floor tom')).to.deep.equal(['Cricket game is on For sunday','Need to practice batting','Warm up befor',1,2,true,{ground:'Silver Star'}]) 
 
 })
 
